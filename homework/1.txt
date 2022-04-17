@@ -1,0 +1,52 @@
+Variables:
+    Las variables son una forma de almacenar cierta informacion y asignarles un nombre
+    para luego poder reutilizarla.
+    hay 5 tipos de datos que podemos almacenar en variables en Javascript que son:
+        
+        De tipo numerico: Por ej: 5. con la cual podemos almacenar un numero para luego utilizarlo como queramos.
+        
+        De tipo string(texto): Por ej: "String". Con la cual podemos almacenar texto.
+        
+        De tipo booleano: Por ej: true/false. con la cual podemos almacenar 2 datos, uno Verdadero(true) y el otro falso(false).
+        
+        De tipo array: Por ej: [1,2,"hola",true]. Con este tipo de datos se pueden almacenar muchos datos en uno de forma ordenada, que luego se pueden cambiar, agregar, eliminar.
+                este tipo se almacena siempre entre 2 corchetes ("[]") y los datos se separan entre si por una coma(",").
+        
+        De tipo objeto: Por ej: {Nombre: Enzo, Apellido: Holgado}: Este tipo de datos es similar al array solo que algo mas complejo a mi parecer,
+                en este se agregan propiedades las cuales estan compuestas por una clave("Nombre" y "Apellido" en el ejemplo), luego dos puntos (":")
+                y por ultimo un valor("Enzo" y "Holgado" en el ejemplo). los valores pueden ser de varios tipos (texto, numericos, booleanos, arrays, objetos y metodos(Funciones)).
+
+Strings:
+    Los Strings como dije antes son un tipo de datos en forma de texto.
+    Estos se declaran siempre entre comillas dobles(""), comillas simples('') o backticks/comillas invertidas(``).
+    todo lo que se ponga aqui cuenta como texto sin inportar que sea un numero o un simbolo siempre el compilador los toma como texto.
+
+Funciones:
+    Las funciones son una forma de poder reutilizar una cierta fraccion de codigo varias veces sin necesidad de escribirla completa.
+    a estas se les puede pasar argumentos al momento de llamarlas para que actuen de una forma u otra.
+    Por ejemplo:
+        function suma(a,b){ 
+            return a + b;
+        }
+        suma(5,2)
+        Aqui lo que estoy haciendo es en la primer linea crear una funcion y declarar 2 argumentos("a,b")
+        y dentro de la funcion entre las llaves("{}") pongo un return* para devolver la suma entre el argumento "a" y el argumento "b".
+        despues al llamar la funcion "suma(5,2)" les doy un valor a esos argumentos, entonces el resultado seria "7".
+
+    *El return es el metodo que detiene la funcion y devuelve lo que se le asigne.
+
+Declaraciones if:
+    El if es un metodo condicional en el cual si el argumento que le pasamos es verdadero la porcion de codigo que este
+    entre llaves("{}") se va a ejecutar y si no lo es la ignorara.
+    por ejemplo: 
+    if(1 == 1){
+        entonces esto se ejecuta
+    }
+    if(1 == 2){
+        entonces esto no se ejecuta y podemos agregar un else al final para ejecutar otra porsion de codigo
+    } else {
+        esto se ejecuta si el argumento que se le paso al if es falso
+    }
+
+Valores booleanos: 
+    Los valores booleanos son solo 2 valores (true/false) uno es afirmativo y el otro es negativo.    
