@@ -23,11 +23,12 @@ function incrementarPorUno(array) {
   // Aumenta cada entero por 1
   // y devuelve el array
   // Tu código:
-  array.map((item) => {
+  const newArray = array.map((item) => {
     Math.floor(item);
     item++;
+    return item;
   });
-  return array;
+  return newArray;
 }
 
 function agregarItemAlFinalDelArray(array, elemento) {
@@ -57,7 +58,7 @@ function dePalabrasAFrase(palabras) {
   palabras.map((item) => {
     string = `${string} ${item}`;
   });
-  return string;
+  return string.trim();
 }
 
 function arrayContiene(array, elemento) {
@@ -102,20 +103,20 @@ function numeroMasGrande(numeros) {
   numeros.sort((a, b) => {
     return a - b;
   });
-  return numeros[numeros.length-1];
+  return numeros[numeros.length - 1];
 }
 
 function multiplicarArgumentos() {
   // Usa la palabra clave `arguments` para multiplicar todos los argumentos y devolver el producto
   // Si no se pasan argumentos devuelve 0. Si se pasa un argumento, simplemente devuélvelo
   // Escribe tu código aquí:
-  if(arguments.length === 0){
+  if (arguments.length === 0) {
     return 0;
-  } else if(arguments.length === 1){
+  } else if (arguments.length === 1) {
     return arguments[0];
   } else {
     let res = 1;
-    for(i = 0; i < arguments.length; i++){
+    for (i = 0; i < arguments.length; i++) {
       res = res * arguments[i];
     }
     return res;
@@ -125,7 +126,7 @@ function multiplicarArgumentos() {
 function cuentoElementos(arreglo) {
   //Realiza una función que retorne la cantidad de los elementos del arreglo cuyo valor es mayor a 18.
   //Escribe tu código aquí
-  let result = arreglo.filter(item => item > 18);
+  let result = arreglo.filter((item) => item > 18);
   return result.length;
 }
 
@@ -134,10 +135,10 @@ function diaDeLaSemana(numeroDeDia) {
   //Realiza una función que dado el número del día de la semana, retorne: Es fin de semana
   //si el día corresponde a Sábado o Domingo y “Es dia Laboral” en caso contrario.
   //Escribe tu código aquí
-  if(numeroDeDia === 1 || numeroDeDia === 7){
+  if (numeroDeDia === 1 || numeroDeDia === 7) {
     return "Es fin de semana";
   } else {
-    return "Es dia laboral";
+    return "Es dia Laboral";
   }
 }
 
@@ -146,7 +147,7 @@ function empiezaConNueve(n) {
   //inicia con 9 y false en otro caso.
   //Escribe tu código aquí
   let nString = n.toString();
-  return nString[0] === 9 ? true : false;
+  return nString[0] === '9' ? true : false;
 }
 
 function todosIguales(arreglo) {
@@ -163,12 +164,22 @@ function mesesDelAño(array) {
   // "Enero", "Marzo" y "Noviembre", guardarlo en nuevo array y retornarlo.
   //Si alguno de los meses no está, devolver: "No se encontraron los meses pedidos"
   // Tu código:
+  const newArray = array.filter((item) => {
+    return item === "Enero" || item === "Marzo" || item === "Noviembre";
+  });
+  if (newArray.includes("Enero" || "Marzo" || "Noviembre")) {
+    return newArray;
+  } else {
+    return "No se encontraron los meses pedidos";
+  }
 }
 
 function mayorACien(array) {
   //La función recibe un array con enteros entre 0 y 200. Recorrer el array y guardar en un nuevo array sólo los
   //valores mayores a 100 (no incluye el 100). Finalmente devolver el nuevo array.
   // Tu código:
+  const newArray = array.filter((item) => item > 100);
+  return newArray;
 }
 
 function breakStatement(numero) {
@@ -179,6 +190,20 @@ function breakStatement(numero) {
   //devolver: "Se interrumpió la ejecución"
   //Pista: usá el statement 'break'
   // Tu código:
+  const newArray = [];
+  let err;
+  for (let i = 2; i <= 20; i += 2) {
+    if (newArray.length === numero + i) {
+      err = "Se interrumpió la ejecución";
+      break;
+    }
+    newArray.push(numero + i);
+  }
+  if (err === undefined) {
+    return newArray;
+  } else {
+    return err;
+  }
 }
 
 function continueStatement(numero) {
@@ -188,6 +213,11 @@ function continueStatement(numero) {
   //Cuando el número de iteraciones alcance el valor 5, no se suma en ese caso y se continua con la siguiente iteración
   //Pista: usá el statement 'continue'
   // Tu código:
+  const newArray = [];
+  for (let i = 2; i < 20; i += 2) {
+    newArray.push(numero + i);
+  }
+  return newArray;
 }
 
 // No modificar nada debajo de esta línea
